@@ -232,7 +232,7 @@ def detect():
 # ==========================================
 # Run App
 # ==========================================
-if _name_ == '_main_':
+if __name__ == '__main__':
     # Render automatically PORT environment variable deta hai, agar na mile toh 10000 use karega
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
