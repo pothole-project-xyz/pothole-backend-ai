@@ -35,7 +35,7 @@ def count_detections(results):
         "Longitudinal Crack": "D00",
         "Transverse Crack": "D10",
         "Alligator Crack": "D20",
-        "Potholes": "D40"  
+        "Pothole": "D40"  
     }
 
     for r in results:
@@ -179,7 +179,7 @@ def detect():
     filepath = os.path.join(UPLOAD_FOLDER, filename)
     file.save(filepath)
 
-    results = model(filepath, conf=0.25, iou=0.45)
+    results = model(filepath, conf=0.70, iou=0.45)
 
     annotated = results[0].plot()
 

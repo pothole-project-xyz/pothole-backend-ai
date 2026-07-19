@@ -1,7 +1,6 @@
 venv/
 env/
 .env
-*.pt
 *.onnx
 *.engine
 runs/
