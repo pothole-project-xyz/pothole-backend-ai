@@ -179,7 +179,7 @@ def detect():
     filepath = os.path.join(UPLOAD_FOLDER, filename)
     file.save(filepath)
 
-    results = model(filepath, conf=0.70, iou=0.45)
+    results = model(filepath, conf=0.25, iou=0.45)
 
     annotated = results[0].plot()
 
