@@ -202,7 +202,7 @@ def detect():
 
             class_name = model.names[cls]
 
-            if class_name == "pothole":
+            if class_name.strip().lower() == "pothole":
                 is_pothole = True
                 confidence = conf
                 break
