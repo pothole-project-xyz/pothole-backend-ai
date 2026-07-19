@@ -1,3 +1,13 @@
+import os
+
+# Temporary debug check
+if os.path.exists("best.pt"):
+    size_mb = os.path.getsize("best.pt") / (1024 * 1024)
+    print(f"✅ best.pt FOUND — Size: {size_mb:.2f} MB")
+else:
+    print("❌ best.pt NOT FOUND!")
+
+model = YOLO("best.pt")
 # Import Libraries
 from flask import Flask, render_template, request, jsonify
 from ultralytics import YOLO
